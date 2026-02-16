@@ -1,0 +1,25 @@
+Exécuter radare2 : 
+r2 crackmes_2
+
+Analyser le fichier :
+aaa
+
+Afficher l'ensemble des chaînes de caractères :
+iz
+
+Chercher les fonctions existantes :
+afl
+
+On va trouver un "main" avec son addresse, pour y aller :
+s main
+
+Afficher les fonctions : 
+pdf
+
+Pour résoudre le crackmes_2 : 
+./crackmes_2 [login] [mdp]
+
+où login = du6Thoo7
+mdp = EW8ingoh
+
+ACCESS GRANTED

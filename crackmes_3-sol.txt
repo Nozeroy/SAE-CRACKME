@@ -1,0 +1,12 @@
+pour avoir la bonne syntaxe dans radare2 :
+faire e asm.syntax=att
+
+ensuite visualiser les données : 
+aaa
+
+faire apparaîtres les chaînes de caractères : 
+izz
+
+login = XahHaf1J
+mdp = Fae9v
+
