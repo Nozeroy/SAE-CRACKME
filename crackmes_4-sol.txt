@@ -1,0 +1,29 @@
+pour avoir la bonne syntaxe dans radare2 :
+faire e asm.syntax=att
+
+ensuite visualiser les données : 
+aaa
+
+faire apparaîtres les chaînes de caractères : 
+iS
+
+[0xf7f6d560]> pxw 4 @ 0x5655c014
+0x5655c014 0x0000004d M... 
+[0xf7f6d560]> pxw 2 @ 0x5655c014
+ 0x5655c014 0x0000004d M. 
+[0xf7f6d560]> pxw 2 @ 0x5655c018
+ 0x5655c018 0x00000063 c.
+
+donc : 
+
+[ebx + 0x20] = 0x0000004d
+[ebx + 0x24] = 0x00000063
+
+conversion hex -> décimal :
+
+0x4d = 77 → login
+
+0x63 = 99 → password
+
+./crackmes_4 77 99
+
