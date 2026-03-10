@@ -1,0 +1,74 @@
+1 : lancer r2 ./crackme5
+
+2 : faire aaa
+
+3 : faire un pdf @ main
+
+4 :0x000012c8      mov edx, dword [ebx + 0x28]
+0x000012ce      mov eax, dword [var_10h]
+0x000012d1      cmp edx, eax
+0x000012d3      jne 0x12f6
+
+0x000012d5      mov edx, dword [ebx + 0x2c]
+0x000012db      mov eax, dword [var_14h]
+0x000012de      cmp edx, eax 
+
+on constate à l'addresse 0x000012d1 un cmp edx, eax
+et on peux aussi constater que sur 0x000012de il y a un cmp edx, eax
+
+on peut en conclure que sur 0x000012d1 = cmp du login
+et que 0x000012de = cmp du mdp
+
+5 : on va quitter r2 (quit) puis on va le relancer
+
+6 : aaa
+
+7 : on va aller à l'adresse du cmp de login et ajouter un breakpoint : db 0x12d1
+
+8 : ood
+
+9 : dc
+
+10 : Le programme va nous demander un login/passwd, on va lui donner 1 et 1
+
+11 : quand le programme s'arrête, on va lancer dr edx (qui va correspondre au login)
+
+12 : on va ensuite faire 4x la commande ds (on va sauter le cmp, le jne, le mov edx, le mov eax)
+
+13 : on va relancer dr edx (qui va correspondre au mdp)
+
+14 : on traduit les flag hexa>décimal
+
+15 : acces granted
+
+[0x00001090]> aaa
+INFO: Analyze all flags starting with sym. and entry0 (aa)
+INFO: Analyze imports (af@@@i)
+INFO: Analyze all functions arguments/locals (afva@@@F)
+INFO: Analyze function calls (aac)
+INFO: Analyze len bytes of instructions for references (aar)
+INFO: Finding and parsing C++ vtables (avrr)
+INFO: Analyzing methods INFO: Recovering local variables (afva)
+INFO: Type matching analysis for all functions (aaft)
+INFO: Propagate noreturn information (aanr)
+INFO: Use -AA or aaaa to perform additional experimental analysis
+[0x00001090]> db 0x12d1
+[0x00001090]> ood
+INFO: File dbg:///home/user/Bureau/SAE-CRACKME/crackmes_5 reopened in read-write mode
+[0xf7f06560]> dc --------------------- ----- CRACKME 5 ----- ---------------------
+Login : 1
+Password : 1
+INFO: hit breakpoint at: 0x5659e2d1 
+[0x5659e2d1]> dr edx 0x00000091 
+[0x5659e2d1]> dss WARN: Breakpoint already set at this address ERROR: Cannot set breakpoint at '0x5659e2d1' 
+[0x5659e2d1]> ds 
+[0x5659e2d1]> ds 
+[0x5659e2d1]> ds 
+[0x5659e2d1]> ds 
+[0x5659e2d1]> dr edx 0x000003ba 
+[0x5659e2d1]> quit
+
+Login  = 0x91  → 145
+Password = 0x3BA → 954
+
+
