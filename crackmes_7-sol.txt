@@ -1,0 +1,11 @@
+1 : aller dans cutter
+
+2 : aller dans la fonction "sym.check_pal"
+
+3 : aller dans le décompileur C
+
+4 : on remarque que le crackme fait un test de palindrome, donc les mdp/login marcgant sont :
+- Les chiffes/lettres seuls (de 0 à 9, de a à z)
+- Les mots "racecar", "kayak", etc ...
+
+

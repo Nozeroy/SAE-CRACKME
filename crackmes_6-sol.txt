@@ -1,0 +1,18 @@
+1 : r2 ./crackme
+
+2 : aaa
+
+3 : pdf @ main
+
+4 : on remarque :
+
+0x000012c8      mov edx, [var_10h]   ; login
+0x000012cb      mov eax, [var_14h]   ; password
+0x000012ce      cmp edx, eax
+0x000012d0      jne 0x12e6           ; si différent -> fail
+
+donc, si on traduit : if(login == passwd) success, else fail
+
+5 : on test avec login : 1234, mdp : 1234
+
+6 : access granted

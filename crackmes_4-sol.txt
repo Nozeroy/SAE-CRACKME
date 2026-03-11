@@ -1,0 +1,26 @@
+1 : Ouvrir cutter
+
+2 : Sélectionner "Crackme4.txt"
+
+3 : aller dans la fonction main, puis aller dans le décompilleur C
+
+4 : on remarques que le crackme prends 2 arguments (ebx + 0x20 et ebx + 024)
+
+5 : on va maintenant dans l'assembleur de la donction main
+
+6 : on recherche ebx + 0x20
+
+7 : on trouve à l'adresse 0x566451b5 : add ebx, 0x2e3f
+
+8 : cela signifie EBX = base des données (GOT / .data / .rodata), donc que le programme va comparer avec ebx + 0x20 et ebx + 0x24
+
+9 : on va calculer l'adresse : ebx = 0x566451b5 + 0x2e3f
+Donc = 0x56647ff4
+
+10 : on va rechercher dans le hexdump l'adresse 0x56647ff4
+
+11 : en perso, j'ai eu 10 40 00 00 4d 00 00 00 63
+
+12 : donc ici, 63 vaux 99 en décimal, et 4d vaux 77
+
+13 : le login/mdp vaux 77 et 99
