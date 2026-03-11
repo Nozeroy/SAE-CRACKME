@@ -1,0 +1,10 @@
+1 : Ouvrir cutter
+
+2 : Aller dans le main
+
+3 : on peut apercevoir que dans le main, il y a 2 appels de fontion, sym.check_min et sym.check_maj
+
+4 : les fonctiones compare le nombres de majuscule et de minuscule présent dans le mdp,
+Si dans le mdp, il y a le même nombre de majuscule que de minuscule, alors acces granted
+
+5 : les mdp peut donc être aussi n'importe quel suite de chiffres/nombres, car ne comptant pas comme maj ni min, çaa donne 0 = 0, acces granted
