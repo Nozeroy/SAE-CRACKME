@@ -1,6 +1,6 @@
 1 : Ouvrir cutter
 
-2 : Sélectionner "Crackme4.txt"
+2 : Sélectionner "crakmes_4"
 
 3 : aller dans la fonction main, puis aller dans le décompilleur C
 
